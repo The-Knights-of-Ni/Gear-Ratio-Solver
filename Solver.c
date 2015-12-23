@@ -129,7 +129,7 @@ void getForMotor(int motorValue, int numberToPrint, float target)
 	printf("------NeverRest %i------\n", motorRatio);
 	for(int i = 0; i < numberToPrint; i++)
 	{
-		printf("%i:%i, Accuracy: %.2f%%\n", possibleSolutions[i][0], possibleSolutions[i][1],
+		printf("%3i:%-3i| Accuracy: %3.2f%%\n", possibleSolutions[i][0], possibleSolutions[i][1],
  			getError(possibleSolutions[i][0], possibleSolutions[i][1], target));
 	}
 }
