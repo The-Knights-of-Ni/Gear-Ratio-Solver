@@ -119,7 +119,7 @@ void solveMany(float desiredRatio, size_t lengthGears, size_t topx)
 
 float getError(int actualDrivenGear, int actualDriveGear, float target)
 {
-	return 100*(float)actualDrivenGear/actualDriveGear*motorRatio/target;
+	return 100*((float)actualDrivenGear/actualDriveGear*motorRatio)/target;
 }
 
 void getForMotor(int motorValue, int numberToPrint, float target)
@@ -130,7 +130,7 @@ void getForMotor(int motorValue, int numberToPrint, float target)
 	for(int i = 0; i < numberToPrint; i++)
 	{
 		printf("%i:%i, Accuracy: %.2f%%\n", possibleSolutions[i][0], possibleSolutions[i][1],
- 			getError(possibleSolutions[i][0], possibleSolutions[i][1], 80));
+ 			getError(possibleSolutions[i][0], possibleSolutions[i][1], target));
 	}
 }
 
